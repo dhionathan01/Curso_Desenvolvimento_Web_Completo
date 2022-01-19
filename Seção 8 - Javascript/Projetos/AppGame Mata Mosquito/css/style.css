@@ -23,7 +23,7 @@ body{
     transform: scaleX(1); /* Posição padrão */
 }
 .ladoB{
-    transform: scaleX(-1);
+    transform: scaleX(-1);  /* Posição invetida */
 }
 
 .painel {
