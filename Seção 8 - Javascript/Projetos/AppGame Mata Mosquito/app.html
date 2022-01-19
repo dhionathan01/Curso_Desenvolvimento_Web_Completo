@@ -16,14 +16,13 @@
             <img id="vida3" src="img/coracao_cheio.png" alt="">
         </div>
         
-        <div class="cronometro"> Tempo restante: ?
+        <div class="cronometro"> Tempo restante: <span id="cronometro"></span>
         </div>
-    
+        
     </div>
     <script>
-        criandoPosicaoRandomica()
-
-        setInterval(function () {
+        document.getElementById('cronometro').innerHTML = tempo
+        var criamosquito = setInterval(function () {
             criandoPosicaoRandomica()           
         }, 2000)
     </script>

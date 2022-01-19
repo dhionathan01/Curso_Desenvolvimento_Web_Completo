@@ -1,6 +1,7 @@
 var altura = 0
 var largura = 0
 var vidas = 1
+var tempo = 15
 
 
 function detectorDaAreaDisponivelDoJogo() {
@@ -8,9 +9,20 @@ function detectorDaAreaDisponivelDoJogo() {
     largura = window.innerWidth
     console.log(largura, altura)
 }
-
-
 detectorDaAreaDisponivelDoJogo()
+
+var cronometro = setInterval(function () {
+    tempo -= 1
+    if (tempo < 0) {
+        clearInterval(cronometro)
+        clearInterval(mosquito)
+        alert('Vitória')
+    } else {
+        document.getElementById('cronometro').innerHTML = tempo
+    }
+    
+    
+}, 1000)
 
 
 function criandoPosicaoRandomica() {
