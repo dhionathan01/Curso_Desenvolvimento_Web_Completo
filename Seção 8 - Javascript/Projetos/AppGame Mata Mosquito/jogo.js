@@ -2,6 +2,16 @@ var altura = 0
 var largura = 0
 var vidas = 1
 var tempo = 15
+var nivel = window.location.search
+nivel = nivel.replace('?', '')
+
+if (nivel === 'facil') {
+    criaMosquitoTempo = 2000
+} else if (nivel === 'normal') {
+    criaMosquitoTempo = 1000
+} else if (nivel === 'dificil') {
+    criaMosquitoTempo = 750
+}
 
 
 function detectorDaAreaDisponivelDoJogo() {
