@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Var & Let</title>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+
+    <script type="text/babel">
+       // 3 escopos: global, função bloco
+    /* 
+       var variavel = 'Variável Escopo global "var"'
+       console.log('global: ' + variavel)
+
+       function escopo_funcao() {
+        var variavel = 'Variável Escopo função "var"'
+
+        console.log('função: ' + variavel)
+
+           if(true){
+            console.log('bloco: ' + variavel)
+           }
+
+           if(true){
+
+           }
+       }
+       escopo_funcao() 
+    */
+
+    function escopo_funcao2() {
+        var variavel = 'Variável Escopo função "var"'
+
+        
+           if(true){
+            console.log('bloco: ' + variavel)
+           }
+
+           if(true){
+            var bloco = 'variável dentro do bloco' // Utilizando o var, a variável sofre um hoisting uma elevação, e vai pro bloco global
+            console.log(bloco)
+           }
+       }
+       console.log('Chamando variável que foi criada dentro de um bloco: ' + bloco) 
+       
+
+       escopo_funcao2()
+    </script>
+</head>
+<body>
+    <div id="output"></div>
+</body>
+</html>
