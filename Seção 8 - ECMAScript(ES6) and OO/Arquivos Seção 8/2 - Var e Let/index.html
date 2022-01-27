@@ -29,7 +29,7 @@
        escopo_funcao() 
     */
 
-    function escopo_funcao2() {
+    /* function escopo_funcao2() {
         var variavel = 'Variável Escopo função "var"'
 
         
@@ -45,7 +45,16 @@
        console.log('Chamando variável que foi criada dentro de um bloco: ' + bloco) 
        
 
-       escopo_funcao2()
+       escopo_funcao2() */
+
+       // O let não sofre hoisting
+
+       if (true){
+           let testando = 'Teste do let dentro do bloco criado'
+           console.log(testando)
+       }
+
+       testando = 'Teste do let fora do bloco criado' // deve ocorrer um erro
     </script>
 </head>
 <body>
