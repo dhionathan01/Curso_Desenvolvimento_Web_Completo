@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Template String</title>
+    <script>
+        let nome = 'Dhionathan'
+        // Forma tradicional:
+        console.log('Oi ' + nome + ', tudo bem?')
+        // Forma com Template String:
+        console.log(`
+        Oi ${nome},
+        tudo bem?
+        `) //  Os backtips permitem quebra de linhas, a criação de um template ou seja gera uma string formatada
+        console.log(`7 + 7 = ${7 + 7}`)
+        // também é possível inserir funções
+
+        function multiplicar(v1, v2){
+            return v1 * v2
+        }
+
+        console.log(`A multiplicação de 8 x 8 = ${multiplicar(8,8)}`)
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
