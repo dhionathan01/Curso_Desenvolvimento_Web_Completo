@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Const - Declaração de Variáveis</title>
+    <script>
+        const FILMES = 'Avengers'
+        // FILMES = 'Iron man' // Um erro será gerado por que não é possível modificar ou sobrescrever o valor de uma constante
+
+        function testando_const(){ // Cmo o let uma constante só existe dentro do escopo em que ela foi criada, podendo assim criar outra  dela com o msm nome modificando seu valor sem probema algum:
+            const FILMES = 'Iron Man'
+            console.log('Dentro da função: ' + FILMES)
+
+        }
+        
+        testando_const()
+        console.log('Escopo global: ' + FILMES)
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
