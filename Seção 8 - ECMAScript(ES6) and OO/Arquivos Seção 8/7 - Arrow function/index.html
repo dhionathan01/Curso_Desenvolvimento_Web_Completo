@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS - Arrow Function</title>
+    <script>
+
+       /*  let quadrado = function(x = 0){
+            return x * x
+        }
+        */
+
+        // O termo arrow function se dá o fato do sinal => que lembra uma flecha, logo sabemos que uma arrow function é uma função anônima, OBS_Pessoal: semelhante as lambdas em python. Veja a seguir:
+
+        /* 
+        let quadrado = (x) => { 
+            return x * x
+        } 
+        */
+
+       /*
+        Observações:
+        Caso for passado somente uma instrução não é necessário colocar o parêntese, no caso "let quadrado = x =>"
+        caso houver somente um bloco q no caso seria o return tbm não é necessário informalo, podendo encurtar a função para: 
+        */
+
+        let quadrado = x => x * x // return implícito
+
+       /* let parOuImpar = numero => {
+        if(numero % 2 === 0){
+            return 'par'
+        }else{
+            return 'impar'
+        }
+       } */
+
+       // utilizando operador ternário para refatorar o if da arrow function:
+
+       let parOuImpar = numero => numero % 2 === 0 ? 'par' : 'ímpar'
+       
+        document.write(quadrado(3))
+        document.write('<br>')
+        document.write(parOuImpar(22))
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
