@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ECMAscript - Funções Parâmetro default</title>
+    <script>
+        function contarUmaHistoria(nome_cachorro = 'Alfredo', gosto = 'dormir', nome_dono = 'Dhionathan' ){// Definindo valores default em caso do valor não ser passado
+            document.write(`Era uma vez um cachorro chamado ${nome_cachorro}, ele adorava ${gosto}, seu dono era o ${nome_dono}, e eles viveram felizes para sempre`)
+        }
+
+        contarUmaHistoria('Ighor', undefined, 'Cleber' ) // Para manter um determinado campo no valor default e os demais não, atribua o valor undefinded em sua posição.
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
