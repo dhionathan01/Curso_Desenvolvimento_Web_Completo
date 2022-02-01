@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OO - Abstração</title>
+    <script>
+        // modelo do objeto, o objeto é uma instância do modelo
+        class ContaBancaria {
+            //agencia
+            //numeroConta
+            //saldo
+            //limite
+
+            // Construtor é o responsável por construir o objeto que para que seja instânciado
+            constructor(){
+                // this serve para contextualizar de onde essa variável existe
+                this.agencia = 1075
+                this.numeroConta = 3149754
+                this.saldo = 1500
+                this.limite = 10000
+            }
+
+            // Métodos nada mais são que funções criadas dentro de uma classe, ela são as ações que o objeto em questão pode realizar
+
+            depositar(valorDeposito) {
+                //this.saldo: Pega o valor atual do saldo do objeto, e (+= valor deposito) incrementa esse valor ao msm
+                this.saldo += valorDeposito
+            }
+
+            sacar(valorSaque) {
+                // Recupera o saldo do objeto, e o decrementa pelo valor contido em Valorsaque
+                this.saldo -= valorSaque
+            }
+
+            consultarSaldo(){
+                // retorna o saldo atual do objeto
+                return this.saldo
+            }
+        }
+
+        // Criando os objetos/ instanciando objetos
+        let x  = new ContaBancaria()
+        let y = new ContaBancaria()
+
+        // consultando o saldo do objeto x
+        console.log(`(Conta x)Consultando saldo: ${x.consultarSaldo()}`)
+        // Realizando o deposito de 500 
+        x.depositar(500)
+        console.log(`(Conta x)Realizando deposito de: 500`)
+         // consultando o saldo do objeto x
+        console.log(`(Conta x)Consultando saldo: ${x.consultarSaldo()}`)
+        x.sacar(300)
+        console.log(`(Conta x)Realizando saque de: 300`)
+        // consultando o saldo do objeto x
+        console.log(`(Conta x)consultando saldo: ${x.consultarSaldo()}`)
+
+        // Observe que os dados da instância y permanecem integros:
+        console.log(`(Conta y)consultando saldo: ${y.consultarSaldo()}`)
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
