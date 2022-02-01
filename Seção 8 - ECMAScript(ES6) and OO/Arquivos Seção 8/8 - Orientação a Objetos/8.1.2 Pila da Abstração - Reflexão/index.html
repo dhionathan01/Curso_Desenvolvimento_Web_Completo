@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OO - Abstração: Reflexão</title>
+    <script>
+      // Um software de marcenaria
+      // Entidades: Cadeira e Sofá
+
+      //paradigma procedural
+
+      // cadeira
+      /* 
+      let cadeiras = Array()
+      cadeiras[0] = Array()
+      cadeiras[0]['qtde_pernas'] = 4
+      cadeiras[0]['giratoria'] = false
+      cadeiras[0]['cor'] = black
+
+      cadeiras[1] = Array()
+      cadeiras[1]['qtde_pernas'] = 1
+      cadeiras[1]['giratoria'] = true
+      cadeiras[1]['cor'] = 'vermelha'
+
+      console.log(cadeiras)
+
+      function girar_cadeira(indice){
+          if(cadeiras[indice]['giratoria'] === true){
+            console.log('girou')
+          }else{
+            console.log('cadeira não é giratoria')
+          }
+      }
+
+      function adicionar_cadeira(qtd_pernas, giratoria, cor){
+          let cadeira = Array()
+          cadeira['qtd_pernas'] = qtd_pernas
+          cadeira['giratoria'] = giratoria
+          cadeira['cor'] = cor
+
+          cadeiras.push(cadeira)
+      }
+      adicionar_cadeira(3, false, 'verde')
+      console.log(cadeiras)
+    */
+      console.log('OO:')
+      //paradigma OO
+      class Cadeira {
+        constructor(qtd_pernas, giratoria, cor){
+        this.qtd_pernas = qtd_pernas
+        this.giratoria = giratoria
+        this.cor = cor
+        }
+
+        girar_cadeira(){
+            if(this.giratoria === true){
+                console.log('girou')  
+            }else{
+                console.log('cadeira não é giratoria')
+            }
+        }
+      }
+
+      let cadeiras = Array()
+      let cadeira = new Cadeira(4, false, 'preta')
+      let cadeira2 = new Cadeira(1, true, 'azul')
+      cadeiras.push(cadeira)
+      cadeiras.push(cadeira2)
+      console.log(cadeiras)
+      cadeira.girar_cadeira()
+      cadeira2.girar_cadeira()
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
